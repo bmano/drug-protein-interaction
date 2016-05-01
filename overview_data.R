@@ -1,5 +1,5 @@
 library("ChemmineR") 
-library(plotly)
+library(ggplot2)
 setwd('/Users/bia/Desktop/bioinformatics2/drug-protein-interaction/') 
 
 # load data
@@ -12,4 +12,5 @@ interactions_count <- rowSums(dti > pki_interest, na.rm = TRUE)
 hist(interactions_count, main="Interactions distribution")
 
 #p <- plot_ly(z = volcano, type = "contour")
+heatmap.2(dti)
 
